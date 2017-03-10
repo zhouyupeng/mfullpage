@@ -257,7 +257,7 @@
         },
         creatMask: function() {
             if ($('#fpMask').length === 0) {
-                var $div = $("<div id='fpMask' style='position:absolute;left:0;right:0;top:0;bottom:0;z-index:99999;'></div>");
+                var $div = $("<div id='fpMask' style='position:absolute;left:0;right:0;top:0;bottom:0;z-index:99999;pointer-events: none;'></div>");
                 $div.appendTo(this.wrap);
             } else {
                 $('#fpMask').show();
