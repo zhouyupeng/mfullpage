@@ -79,3 +79,8 @@ use，是否开始音乐,默认`true`,src，音乐地址
 - [loop-false](http://zhouyupeng.github.io/mfullpage/loop-false.html)
 - [drag-scale](http://zhouyupeng.github.io/mfullpage/drag-scale.html)
 - [dotNav](http://zhouyupeng.github.io/mfullpage/dotNav.html)
+
+
+## 相关链接
+
+[zepto.fullpage](https://github.com/yanhaijing/zepto.fullpage)
