@@ -41,16 +41,18 @@
 <script type="text/javascript">
 mfullpage.init({
     'timer': 0.5,
-    // 'drag':true,
+    'drag':true,
     // 'scale':true,
     'start':3,
     beforeChange: function(obj) {
+
         $('.page').eq(obj['cur']).find('.js-animate').each(function() {
             $(this).removeClass($(this).data('animate')).hide();
         });
     },
     afterChange: function(obj) {
         console.log(obj['cur']);
+        console.log(obj['prev']);
         $('.fix').html(obj['cur'] + 1);
         $('.js-animate').hide();
         $('.page').eq(obj['cur']).find('.js-animate')
@@ -59,7 +61,7 @@ mfullpage.init({
             });
     },
     moving: function(moving) {
-        console.log(moving);
+        // console.log(moving);
         $('.upOrDownPx').html(moving);
 
     }
