@@ -17,27 +17,27 @@
 
 
 ## 参数
-mfullpage.init({
-    start: 0,
-    scale: false,
-    drag: false,
-    percentage: 1 / 2,
-    timer: 0.3,
-    loop: true,
-    showDot: false,
-    beforeChange: function(obj) {
-	},
-    afterChange: function(obj) {
-    },
-    moving: function(movePx) {
-    },
-    useMusic: {
-        'use': true,
-        'autoPlay': false,
-        'loopPlay': true,
-        'url':
-    }
-});
+    mfullpage.init({
+        start: 0,
+        scale: false,
+        drag: false,
+        percentage: 1 / 2,
+        timer: 0.3,
+        loop: true,
+        showDot: false,
+        beforeChange: function(obj) {
+    	},
+        afterChange: function(obj) {
+        },
+        moving: function(movePx) {
+        },
+        useMusic: {
+            'use': true,
+            'autoPlay': false,
+            'loopPlay': true,
+            'url':
+        }
+    });
 ### start
 从第几屏开始，默认是第一屏。
 
