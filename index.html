@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="./style/animate.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>mfullpage.js</title>
+</head>
+
+<body>
+    <div class="fullpage-wrap">
+        <div class="fp-inner">
+            <div class="page" style="background: blue">
+                <div class="js-animate animated" data-animate="bounceIn">bounceIn</div>
+            </div>
+            <div class="page" style="background: red;">
+                <div class="js-animate animated" data-animate="bounce">bounce</div>
+            </div>
+            <div class="page" style="background: #dd9900;">
+                <div class="js-animate animated" data-animate="fadeInLeft">fadeInLeft</div>
+            </div>
+            <div class="page" style="background: green">
+                <div class="js-animate animated" data-animate="rollIn">rollIn</div>
+            </div>
+            <div class="page" style="background: #ff7755">
+                <div class="js-animate animated" data-animate="rubberBand">rubberBand</div>
+            </div>
+            <div class="page" style="background: #999">
+                <div class="js-animate animated" data-animate="fadeInRight">fadeInRight</div>
+            </div>
+        </div>
+        <div class="arrow"></div>
+    </div>
+    <div class="fix"></div>
+    <div class="upOrDownPx"></div>
+</body>
+<script src="./js/zepto.min.js"></script>
+<script type="text/javascript" src='./js/mfullpage.js'></script>
+<script type="text/javascript">
+mfullpage.init({
+    'timer': 0.5,
+    // 'drag':true,
+    // 'scale':true,
+    'start':3,
+    beforeChange: function(obj) {
+        $('.page').eq(obj['cur']).find('.js-animate').each(function() {
+            $(this).removeClass($(this).data('animate')).hide();
+        });
+    },
+    afterChange: function(obj) {
+        console.log(obj['cur']);
+        $('.fix').html(obj['cur'] + 1);
+        $('.js-animate').hide();
+        $('.page').eq(obj['cur']).find('.js-animate')
+            .each(function() {
+                $(this).addClass($(this).data('animate')).show();
+            });
+    },
+    moving: function(moving) {
+        console.log(moving);
+        $('.upOrDownPx').html(moving);
+
+    }
+});
+
+</script>
+
+</html>
